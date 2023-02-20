@@ -4,9 +4,8 @@
 //
 
 using System;
-using System.Diagnostics;
-using System.Threading;
 using System.IO.Ports;
+using System.Threading;
 
 namespace SerialCommunication
 {

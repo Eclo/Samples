@@ -1,26 +1,12 @@
-//
+﻿//
 // Copyright (c) .NET Foundation and Contributors
 // See LICENSE file in the project root for full license information.
 //
 
 using System;
 using System.Diagnostics;
-using System.Threading;
 using System.IO.Ports;
-#if BUIID_FOR_ESP32
-using nanoFramework.Hardware.Esp32;
-#endif
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
-///                                                                        ///
-/// NOTE: when working with ESP32 edit the nfproj file and add             ///
-/// BUIID_FOR_ESP32 to the DefineConstants, like this:                     ///
-///                                                                        ///
-/// <DefineConstants>$(DefineConstants);BUIID_FOR_ESP32;</DefineConstants> ///
-///                                                                        ///
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
+using System.Threading;
 
 namespace SerialCommunication
 {
@@ -39,21 +25,12 @@ namespace SerialCommunication
                 Debug.WriteLine($" {port}");
             }
 
-#if BUIID_FOR_ESP32
-            ////////////////////////////////////////////////////////////////////////////////////////////////////
-            // COM2 in ESP32-WROVER-KIT mapped to free GPIO pins
-            // mind to NOT USE pins shared with other devices, like serial flash and PSRAM
-            // also it's MANDATORY to set pin function to the appropriate COM before instantiating it
-
-            Configuration.SetPinFunction(32, DeviceFunction.COM2_RX);
-            Configuration.SetPinFunction(33, DeviceFunction.COM2_TX);
-
-            // open COM2
-            _serialDevice = new SerialPort("COM2");
-#else
             // open COM7 (connector 1)
+            // TX: pin 2
+            // RX: pin 3
+            // GND: pin 4
             _serialDevice = new SerialPort("COM7");
-#endif
+
             // set parameters
             _serialDevice.BaudRate = 9600;
             _serialDevice.Parity = Parity.None ;
