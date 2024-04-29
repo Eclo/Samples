@@ -6,9 +6,9 @@ Shows how to use various APIs related with TLS (Transport Layer Security).
 
 - [🌶️🌶️ - Parsing a Certificate to access details](./ParseCertificate/)
 - [🌶️🌶️ - Secure Client for Ethernet connected devices](./SecureClient/)
-- [🌶️🌶️ - Secure Client for ESP32 devices (Wi-Fi connection)](./SecureClient_ESP32/)
+- [🌶️🌶️ - Secure Client for ESP32 devices (Wi-Fi connection)](./SecureClient_WiFi/)
 - [🌶️🌶️🌶️ - Secure Server for Ethernet connected devices](./SecureServer/)
-- [🌶️🌶️🌶️ - Secure Server for ESP32 devices (Wi-Fi connection)](./SecureServer_ESP32/)
+- [🌶️🌶️🌶️ - Secure Server for ESP32 devices (Wi-Fi connection)](./SecureServer_WiFi/)
 
 ## Test certificates
 
@@ -48,7 +48,7 @@ An hardware device with networking capabilities running a nanoFramework image.
 
 ## Build the sample
 
-1. Start Microsoft Visual Studio 2019 (VS 2017 should be OK too) and select `File > Open > Project/Solution`.
+1. Start Microsoft Visual Studio 2022 or Visual Studio 2019 (Visual Studio 2017 should be OK too) and select `File > Open > Project/Solution`.
 1. Starting in the folder where you unzipped the samples/cloned the repository, go to the subfolder for this specific sample. Double-click the Visual Studio Solution (.sln) file.
 1. Press `Ctrl+Shift+B`, or select `Build > Build Solution`.
 
@@ -64,6 +64,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

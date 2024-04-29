@@ -16,7 +16,7 @@ An hardware device with networking capabilities running a nanoFramework image.
 
 ### Reference
 
-- [nanoFramework.Net.WebSockets](https://github.com/nanoframework/System.Net.WebSockets/blob/develop/README.md)
+- [nanoFramework.Net.WebSockets](https://github.com/nanoframework/System.Net.WebSockets/blob/main/README.md)
 - [System.Net.WebSockets](http://docs.nanoframework.net/api/System.Net.WebSockets.html)
 - [getting started guide](https://www.feiko.io/posts/2022-01-03-getting-started-with-net-nanoframework)
 
@@ -39,5 +39,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

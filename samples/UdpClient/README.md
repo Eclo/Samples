@@ -10,9 +10,9 @@ An hardware device running a nanoFramework image with networking capabilities en
 
 Three samples are provided:
 
-- [🌶️ - QOTDClient](./QOTDClient/) : show how to use `UdpClient` as an udp client. It connect to a public `Quote of the day` server and display the result.
-- [🌶️ - UdpEchoServer](./UdpEchoServer/) : show how to use `UdpClient` as an udp server. It implements a simple Udp server that listen to messages and echo them back to the sender. You need a companion sender application to test it. The `Sender.ipynb` notebook in the folder can be used with .net interactive in vscode to send messages to the server ([check this](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) on how to proceed).
-- [🌶️ - DumpSSDPRequests](./DumpSSDPRequests/) : show how to join a multicast group and get multicast messages. This sample display the SSDP messages that are sent by the different devices on the local network.
+- [🌶️ - QOTDClient](./QOTDClient/Program.cs) : show how to use `UdpClient` as an udp client. It connect to a public `Quote of the day` server and display the result.
+- [🌶️ - UdpEchoServer](./UdpEchoServer/Program.cs) : show how to use `UdpClient` as an udp server. It implements a simple Udp server that listen to messages and echo them back to the sender. You need a companion sender application to test it. The `Sender.ipynb` notebook in the folder can be used with .net interactive in vscode to send messages to the server ([check this](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode) on how to proceed).
+- [🌶️ - DumpSSDPRequests](./DumpSSDPRequests/Program.cs) : show how to join a multicast group and get multicast messages. This sample display the SSDP messages that are sent by the different devices on the local network.
 
 ## Build the sample
 
@@ -34,6 +34,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

@@ -10,11 +10,15 @@ using nanoFramework.Device.Bluetooth.GenericAttributeProfile;
 using System.Net.NetworkInformation;
 using System.Device.Wifi;
 using nanoFramework.Networking;
+using nanoFramework.Device.Bluetooth.Advertisement;
+using System.Threading;
 
 namespace ImprovWifi
 {
     public class Improv
     {
+        const string ImprovUuid = "00467768-6228-2272-4663-277478268000";
+
         /// <summary>
         /// Improv error states.
         /// </summary>
@@ -104,7 +108,22 @@ namespace ImprovWifi
         {
             if (!_started)
             {
-                _serviceProvider.StartAdvertising(new GattServiceProviderAdvertisingParameters() { DeviceName = deviceName, IsConnectable = true, IsDiscoverable = true });
+                BluetoothLEServer.Instance.DeviceName = deviceName;
+                GattServiceProviderAdvertisingParameters gspars = new GattServiceProviderAdvertisingParameters()
+                {
+                    IsConnectable = true,
+                    IsDiscoverable = true,
+                };
+
+                // Create a data section with 128bit UUID
+                DataWriter srvUuid = new DataWriter();
+                srvUuid.WriteUuid(new Guid(ImprovUuid));
+
+                gspars.Advertisement.DataSections.Add(
+                        new BluetoothLEAdvertisementDataSection((byte)BluetoothLEAdvertisementDataSectionType.CompleteList128uuid,
+                        srvUuid.DetachBuffer()));
+
+                _serviceProvider.StartAdvertising(gspars);
                 _started = true;
             }
         }
@@ -314,7 +333,7 @@ namespace ImprovWifi
         /// <param name="ReadRequestEventArgs"></param>
         private void CharacteristicCurrentState_ReadRequested(GattLocalCharacteristic sender, GattReadRequestedEventArgs ReadRequestEventArgs)
         {
-            //Console.WriteLine($"CurrentState_ReadRequested {_currentState}");
+            Console.WriteLine($"CurrentState_ReadRequested {_currentState}");
             ReadRequestEventArgs.GetRequest().RespondWithValue(GetByteBuffer((byte)_currentState));
         }
 
@@ -325,7 +344,7 @@ namespace ImprovWifi
         /// <param name="ReadRequestEventArgs"></param>
         private void CharacteristicErrorState_ReadRequested(GattLocalCharacteristic sender, GattReadRequestedEventArgs ReadRequestEventArgs)
         {
-            //Console.WriteLine($"ErrorState_ReadRequested {_errorState}");
+            Console.WriteLine($"ErrorState_ReadRequested {_errorState}");
             ReadRequestEventArgs.GetRequest().RespondWithValue(GetByteBuffer((byte)_errorState));
         }
 
@@ -338,7 +357,7 @@ namespace ImprovWifi
         {
             GattWriteRequest request = WriteRequestEventArgs.GetRequest();
 
-            //Console.WriteLine($"RpcCommand_WriteRequested");
+            Console.WriteLine($"RpcCommand_WriteRequested");
 
             // Check expected data length
             if (request.Value.Length < 2)
@@ -353,7 +372,7 @@ namespace ImprovWifi
             byte length = rdr.ReadByte();
 
             // Do something with received data
-            //Console.WriteLine($"Rpc command {command} length:{length}");
+            Console.WriteLine($"Rpc command {command} length:{length}");
 
             switch (command)
             {
@@ -379,7 +398,7 @@ namespace ImprovWifi
                         string ssid = UTF8Encoding.UTF8.GetString(bssid, 0, bssid.Length);
                         string password = UTF8Encoding.UTF8.GetString(bpassword, 0, bpassword.Length);
 
-                        //Console.WriteLine($"Rpc Send Wifi SSID:{ssid} Password:{password}");
+                        Console.WriteLine($"Rpc Send Wifi SSID:{ssid} Password:{password}");
 
                         // Start provisioning
                         CurrentState = ImprovState.provisioning;
@@ -472,14 +491,14 @@ namespace ImprovWifi
             // Notify change in value
             if (_characteristicRpcResult != null)
             {
-                //Console.WriteLine($"Notify rpc result:{_rpcResult}");
+                Console.WriteLine($"Notify rpc result:{_rpcResult}");
                 _characteristicRpcResult.NotifyValue(SetupRpcResult());
             }
         }
 
         private void CharacteristicRpcResult_ReadRequested(GattLocalCharacteristic sender, GattReadRequestedEventArgs ReadRequestEventArgs)
         {
-            //Console.WriteLine($"RpcResult_ReadRequested {_rpcResult}");
+            Console.WriteLine($"RpcResult_ReadRequested {_rpcResult}");
             ReadRequestEventArgs.GetRequest().RespondWithValue(SetupRpcResult());
         }
 
@@ -506,11 +525,23 @@ namespace ImprovWifi
             WifiAdapter wa = WifiAdapter.FindAllAdapters()[0];
             wa.Disconnect();
 
-            System.Threading.CancellationTokenSource cs = new(30000);
+            CancellationTokenSource cs = new(30000);
             Console.WriteLine("ConnectDHCP");
-            bool success =  WifiNetworkHelper.ConnectDhcp(ssid, password, requiresDateTime: true, token: cs.Token);
+            WifiNetworkHelper.Disconnect();
+            bool success;
+
+            success = WifiNetworkHelper.ConnectDhcp(ssid, password, WifiReconnectionKind.Automatic, true, token: cs.Token);
+
+            if (!success)
+            {
+                wa.Disconnect();
+                // Network helper only allow 1 configuration, we've most likely try to connect before, let's make it manual
+                var res = wa.Connect(ssid, WifiReconnectionKind.Automatic, password);
+                // If we still arenot connected, it means, it's not good!
+                success = res.ConnectionStatus == WifiConnectionStatus.Success;
+            }
+
             Console.WriteLine($"ConnectDHCP exit {success}");
-            cs.Cancel();
             return success;
         }
 

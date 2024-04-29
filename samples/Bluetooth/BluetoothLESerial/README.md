@@ -1,6 +1,6 @@
 # 🌶️ - Bluetooth Low Energy Serial profile sample
 
-Shows how to use the Serial Protocol Profile APIs included in the [NanoFramework.Device.Bluetooth](http://docs.nanoframework.net/api/NanoFramework.Device.Bluetooth.html).   
+Shows how to use the Serial Protocol Profile APIs included in the [NanoFramework.Device.Bluetooth](http://docs.nanoframework.net/api/NanoFramework.Device.Bluetooth.html).
 
 The sample allows a Bluetooth Terminal program to connect and send/receive text messages. There are a number of applications on both Android and IOS
 that will work.
@@ -9,7 +9,9 @@ The device should be seen as "nanoFrameworkSerial" when scanning for the device.
 
 Send device 'help' to get information on what messages it will respond to.
 
-This sample is a example of what you could do to provision your device with required data like wifi credentials, name etc. 
+This sample is a example of what you could do to provision your device with required data like wifi credentials, name etc.
+
+The sample is [located here](./Program.cs).
 
 ## Hardware requirements
 
@@ -28,7 +30,7 @@ Currently there are 2 firmware images that support Bluetooth:-
 
 ## Build the sample
 
-1. Start Microsoft Visual Studio 2019 (VS 2017 should be OK too) and select `File > Open > Project/Solution`.
+1. Start Microsoft Visual Studio 2022 or Visual Studio 2019 (Visual Studio 2017 should be OK too) and select `File > Open > Project/Solution`.
 1. Starting in the folder where you unzipped the samples/cloned the repository, go to the subfolder for this specific sample. Double-click the Visual Studio Solution (.sln) file.
 1. Press `Ctrl+Shift+B`, or select `Build > Build Solution`.
 
@@ -44,6 +46,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

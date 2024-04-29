@@ -6,10 +6,10 @@ After connecting to the broker you can use `Publish()` method to publish a messa
 
 For more details, see the comments inside the samples.
 
-| Sample | Description | 
+| Sample | Description |
 |---|---|
 |[🌶️🌶️ - BasicExample.Ethernet](./BasicExample.Ethernet)|The most basic usage, without authentication or certificates. Ready to run on Ethernet-based boards.|
-|[🌶️🌶️ -BasicExample.Wifi](./BasicExample.Wifi)|The most basic usage, without authentication or certificates. Ready to run on Wifi-based boards.|
+|[🌶️🌶️ -BasicExample.Wifi](./BasicExample.WiFi)|The most basic usage, without authentication or certificates. Ready to run on Wifi-based boards.|
 |[🌶️🌶️🌶️ - AdvancedExample.Certificates](./AdvancedExample.Certificates)|Basic usage, but uses secure connection and certificate-based authorization.|
 |[🌶️🌶️🌶️ - AdvancedExample.Aws](./AdvancedExample.Aws)|Very advanced sample of how to use MQTT in AWS. Requires having an AWS account.|
 |[🌶️🌶️🌶️ - AdvancedExample.Azure](./AdvancedExample.Azure)|Very advanced sample of how to use MQTT in Azure. Requires having an Azure account.|
@@ -27,7 +27,7 @@ These samples have been tested with SMT32F769IDISCOVERY, ESP-WROVER-KIT and ESP3
 
 ## Build the sample
 
-1. Start Microsoft Visual Studio 2019 (VS 2017 should be OK too) and select `File > Open > Project/Solution`.
+1. Start Microsoft Visual Studio 2022 or Visual Studio 2019 (Visual Studio 2017 should be OK too) and select `File > Open > Project/Solution`.
 1. Starting in the folder where you unzipped the samples/cloned the repository, go to the subfolder for this specific sample. Double-click the Visual Studio Solution (.sln) file.
 1. Press `Ctrl+Shift+B`, or select `Build > Build Solution`.
 
@@ -43,6 +43,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

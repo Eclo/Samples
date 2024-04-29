@@ -30,6 +30,7 @@
 * [🌶️ - Analogic/Digital converter](samples/GiantGecko.Adc)
 * [🌶️ - Blink your first led](samples/Blinky)
 * [🌶️ - Digital Analog Converter sample](samples/DAC)
+* [🌶️ - ESP32 Pulse Counter sample](samples/Gpio/Esp32PulseCounter)
 * [🌶️ - GPIO and events sample](samples/Gpio/Gpio+Events)
 * [🌶️ - GPIO and events sample (.NET IoT style)](samples/Gpio/Gpio+EventsIoTStyle)
 * [🌶️ - GPIO sample pack](samples/Gpio)
@@ -42,6 +43,7 @@
 * [🌶️🌶️ - I2S Microphone sample](samples/I2S/Input)
 * [🌶️🌶️ - I2S sample pack](samples/I2S)
 * [🌶️🌶️ - I2S Speaker sample](samples/I2S/Output)
+* [🌶️🌶️ - WebServer to test pour Servo Motors](samples/Webserver/ServoMotorTester)
 * [🌶️🌶️🌶️ - Using Azure SDK with BMP280 on M5Stack with .NET nanoFramework](samples/AzureSDK/AzureSDKSensorCertificate/Readme.md)
 
 ### AMQP
@@ -57,6 +59,7 @@
 * [🌶️🌶️ - Azure IoT Plug & Play with MQTT protocol](samples/AzureSDK/AzureIoTPnP)
 * [🌶️🌶️ - Azure Service Bus AMQP sample](samples/AMQP/Azure-ServiceBus-Sender)
 * [🌶️🌶️ - Simple sample **with** Azure lib and retry pattern for connection](samples/AzureSDK/AzureSDKBasic)
+* [🌶️🌶️ - Using a Modem like SIM7080, simple sample **with** Azure lib and retry pattern for connection](samples/AzureSDK/AzureSDKBasicFullyManaged)
 * [🌶️🌶️ -Azure AMQP sample](samples/AMQP/Azure-IoT-Hub)
 * [🌶️🌶️ to 🌶️🌶️🌶️ - Azure SDK sample pack](samples/AzureSDK)
 * [🌶️🌶️🌶️ - Azure Edge OTA example](samples/AzureSDK/AzureEdgeOta)
@@ -72,8 +75,14 @@
 * [🌶️ - Bluetooth Low Energy Serial profile sample](samples/Bluetooth/BluetoothLESerial)
 * [🌶️ - Bluetooth Low energy: adding, replacing services to the main service](samples/Bluetooth/BluetoothLESample3)
 * [🌶️ to 🌶️🌶️🌶️ - Bluetooth sample pack](samples/Bluetooth)
+* [🌶️🌶️ -  Demonstrates how to use the watcher filter classes](samples/Bluetooth/WatcherFilters)
+* [🌶️🌶️ - Bluetooth Low energy: Broadcast current values in a Bluetooth advertisement](samples/Bluetooth/BroadcastValues)
+* [🌶️🌶️ - Bluetooth Low energy: Environmental Sensor data collection](samples/Bluetooth/Central2)
 * [🌶️🌶️ - Bluetooth Low energy: read static and dynamic values, notification, read/write value](samples/Bluetooth/BluetoothLESample1)
 * [🌶️🌶️ - Bluetooth Low energy: read/write with encryption a value](samples/Bluetooth/BluetoothLESample2)
+* [🌶️🌶️ - Bluetooth Low energy: Watch for Bluetooth Advertisements](samples/Bluetooth/Central1)
+* [🌶️🌶️🌶️ -  Create an IBeacon](samples/Bluetooth/BluetoothBeacon)
+* [🌶️🌶️🌶️ - Bluetooth Low energy: Demonstrates pairing and authentication in Client program](samples/Bluetooth/Central3)
 * [🌶️🌶️🌶️ - Improv Wifi provisioning](samples/Bluetooth/ImprovWifi)
 
 ### CAN
@@ -82,14 +91,18 @@
 
 ### ESP32 specific
 
+* [🌶️ - ESP32 Pulse Counter sample](samples/Gpio/Esp32PulseCounter)
 * [🌶️ - Hardware ESP32 Deep sleep sample](samples/Hardware.Esp32)
 * [🌶️ - Touch pad ESP32 sample](samples/TouchESP32)
 * [🌶️ to 🌶️🌶️🌶️ - Bluetooth sample pack](samples/Bluetooth)
 * [🌶️🌶️ - Hardware ESP32 RMT sample pack](samples/Hardware.Esp32.Rmt)
+* [🌶️🌶️ - Infrared remote receiver based on VS1838 with RMT](samples/Hardware.Esp32.Rmt/InfraredRemoteReceiver)
 * [🌶️🌶️ - NeoPixel Strip WS2812 with RMT](samples/Hardware.Esp32.Rmt/NeoPixelStrip)
 * [🌶️🌶️ - NeoPixel Strip WS2812 with RMT low memory](samples/Hardware.Esp32.Rmt/NeoPixelStripLowMemory)
 * [🌶️🌶️ - Simple sample **with** Azure lib and retry pattern for connection](samples/AzureSDK/AzureSDKBasic)
 * [🌶️🌶️ - Ultrasonic HC-SR04 sensor with RMT](samples/Hardware.Esp32.Rmt/Ultrasonic)
+* [🌶️🌶️ - Using a Modem like SIM7080, simple sample **with** Azure lib and retry pattern for connection](samples/AzureSDK/AzureSDKBasicFullyManaged)
+* [🌶️🌶️🌶️ -  Create an IBeacon](samples/Bluetooth/BluetoothBeacon)
 * [🌶️🌶️🌶️ - Complete Azure MQTT sample using BMP280 sensor **with** Azure lib and deep sleep](samples/AzureSDK/AzureSDKSleepBMP280)
 * [🌶️🌶️🌶️ - Complete Azure MQTT sample using BMP280 sensor **without Azure lib** and with deep sleep](samples/AzureMQTTTwinsBMP280Sleep)
 * [🌶️🌶️🌶️ - Improv Wifi provisioning](samples/Bluetooth/ImprovWifi)
@@ -107,8 +120,10 @@
 
 * [🌶️🌶️ - Graphics Primitives](samples/Graphics/Primitives)
 * [🌶️🌶️ - Screen samples](samples/Graphics/Screens)
+* [🌶️🌶️ - Using an existing generic graphic driver](samples/Graphics/UsingGenericDriver)
 * [🌶️🌶️ -Simple WPF](samples/Graphics/SimpleWpf)
 * [🌶️🌶️ to 🌶️🌶️🌶️ -Graphics samples](samples/Graphics)
+* [🌶️🌶️🌶️ - Creating your own generic graphic driver](samples/Graphics/GenericDriver)
 * [🌶️🌶️🌶️ - Tetris Demo Game for nanoFramework](samples/Graphics/Tetris)
 
 ### IoT.Device
@@ -142,6 +157,7 @@
 * [🌶️🌶️ - HTTP sample pack](samples/HTTP)
 * [🌶️🌶️ - HTTP WebRequest sample](samples/HTTP/HttpWebRequest)
 * [🌶️🌶️ - Networking sample pack](samples/Networking)
+* [🌶️🌶️ - WebServer to test pour Servo Motors](samples/Webserver/ServoMotorTester)
 * [🌶️🌶️ - WebSocket ServerClient Sample](samples/WebSockets/Websockets.ServerClient.Sample/README.zh-cn.md)
 * [🌶️🌶️ - WebSocket Server示例与RGB Led](samples/WebSockets/WebSockets.Server.RgbSample/README.zh-cn.md)
 * [🌶️🌶️ - Wifi Soft AP sample](samples/WiFiAP)
@@ -166,7 +182,7 @@
 ### Texas Instrument specific
 
 * [🌶️ - Texas Instruments EasyLink sample pack](samples/TI.EasyLink)
-* [🌶️ - TI utilities](samples/Hardware.TI/TI.Utilities)
+* [🌶️ - TI utilities read IEEE address](samples/Hardware.TI/TI.Utilities)
 * [🌶️ to 🌶️🌶️ - Hardware TI SimpleLink sample pack](samples/Hardware.TI)
 * [🌶️🌶️ - TI Power Mode](samples/Hardware.TI/TI.PowerMode)
 
@@ -204,6 +220,7 @@
 
 * [🌶️ - WiFI 示例](samples/Wifi/README.zh-cn.md)
 * [🌶️🌶️ - Wifi Soft AP sample](samples/WiFiAP)
+* [🌶️🌶️🌶️ - Improv Wifi provisioning](samples/Bluetooth/ImprovWifi)
 
 </devices>
 

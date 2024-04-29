@@ -2,6 +2,8 @@
 
 This samples shows how to read various Device IDs from Silabs Giant Gecko.
 
+The sample is [located here](./Program.cs).
+
 ## Build the sample
 
 1. Start Microsoft Visual Studio 2022 (VS 2019 should be OK too) and select `File > Open > Project/Solution`.
@@ -20,6 +22,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

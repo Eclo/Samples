@@ -2,6 +2,8 @@
 
 Shows how to use the [nanoFramework.Device.OneWire](http://docs.nanoframework.net/api/nanoFramework.Device.OneWire.html) API to read and write from/to a 1-Wire device.
 
+The sample is [located here](./).
+
 ## Hardware requirements
 
 - A .NET nanoFramework target with 1-Wire capability enabled in the firmware for example a STM32F407_DISCO or any of the ESP32 targets.
@@ -28,7 +30,7 @@ If you have another type of device supporting 1-Wire, you will have to adjust th
 
 ### Reference
 
-- [nanoFramework.Devices.OneWire](http://docs.nanoframework.net/api/nanoFramework.Devices.OneWire.html)
+- [nanoFramework.Device.OneWire](http://docs.nanoframework.net/api/nanoFramework.Device.OneWire.html)
 - [1-Wire Protocol](https://en.wikipedia.org/wiki/1-Wire)
 
 ## Build the sample
@@ -49,6 +51,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

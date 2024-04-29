@@ -10,8 +10,9 @@ Samples
 - [🌶️🌶️ - HC-SR04 ultrasonic ranging](Ultrasonic/)
 - [🌶️🌶️ - NeoPixel Strip WS2812](NeoPixelStrip/)
 - [🌶️🌶️ - NeoPixel Strip WS2812 with low memory consumption](NeoPixelStripLowMemory/)
+- [🌶️🌶️ - Infrared remote receiver based on VS1838 with RMT](./InfraredRemoteReceiver/)
 
-> **Note**: those sensors and devices are available as nuget in [Device.IoT repository](https://github.com/nanoFramework/nanoFramework.Deive.IoT).
+> **Note**: those sensors and devices are available as nuget in [Device.IoT repository](https://github.com/nanoFramework/nanoFramework.IoT.Device).
 
 ## Hardware requirements
 
@@ -23,7 +24,7 @@ Any ESP32 hardware device running a nanoFramework image.
 
 ## Build the sample
 
-1. Start Microsoft Visual Studio 2019 (VS 2017 should be OK too) and select `File > Open > Project/Solution`.
+1. Start Microsoft Visual Studio 2022 or Visual Studio 2019 (Visual Studio 2017 should be OK too) and select `File > Open > Project/Solution`.
 1. Starting in the folder where you unzipped the samples/cloned the repository, go to the subfolder for this specific sample. Double-click the Visual Studio Solution (.sln) file.
 1. Press `Ctrl+Shift+B`, or select `Build > Build Solution`.
 
@@ -39,6 +40,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

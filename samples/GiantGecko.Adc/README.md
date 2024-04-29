@@ -8,8 +8,8 @@ A Giant Gecko device running a .NET nanoFramework image.
 
 ## Samples
 
-- [🌶️ -  Read ADC channel](Read.Channel/)
-- [🌶️ -  Continuous Scanning ADC](ContinuousSampling/)
+- [🌶️ -  Read ADC channel](./Read.Channel/)
+- [🌶️ -  Continuous Scanning ADC](./ContinuousSampling/)
 
 ## Related topics
 
@@ -35,5 +35,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

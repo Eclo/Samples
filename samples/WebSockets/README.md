@@ -12,7 +12,7 @@ Shows how to use the WebSockets related APIs in [System.Net.WebSockets](http://d
 
 ### WebSockets Client Sample
 
-[🌶️ - Client.Sample](./Websockets.Client.Sample) shows how to use the Websocket Client.
+[🌶️ - Client.Sample](./WebSockets.Client.Sample) shows how to use the Websocket Client.
 
 ### WebSockets Server and Client sample
 
@@ -27,7 +27,7 @@ The Websocket Server Sample requires a M5Stack ATOM Lite board, but can be easil
 
 ### Reference
 
-- [nanoFramework.Net.WebSockets](https://github.com/nanoframework/System.Net.WebSockets/blob/develop/README.md)
+- [nanoFramework.Net.WebSockets](https://github.com/nanoframework/System.Net.WebSockets/blob/main/README.md)
 - [System.Net.WebSockets](http://docs.nanoframework.net/api/System.Net.WebSockets.html)
 
 ## Building the samples
@@ -48,5 +48,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

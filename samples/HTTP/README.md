@@ -20,13 +20,13 @@ Please note that samples are offered in "pairs": one for wired connected targets
 
 ### HTTP Azure Get
 
-Illustrates how to connect to [🌶️🌶️🌶️ - Azure and perform GET requests](./AzureGET).
-Illustrates how to connect to [🌶️🌶️🌶️ - Azure and perform GET requests with wifi](./AzureGET_Wifi) for Wi-Fi connected targets.
+Illustrates how to connect to [🌶️🌶️🌶️ - Azure and perform GET requests](./HttpAzureGET).
+Illustrates how to connect to [🌶️🌶️🌶️ - Azure and perform GET requests with wifi](./HttpAzureGET_Wifi) for Wi-Fi connected targets.
 
 ### HTTP Azure POST
 
-Illustrates how to connect to [🌶️🌶️🌶️ - Azure and perform POST requests](./AzurePOST).
-Illustrates how to connect to [🌶️🌶️🌶️ - Azure and perform POST requests with wifi](./AzurePOST) for Wi-Fi connected targets.
+Illustrates how to connect to [🌶️🌶️🌶️ - Azure and perform POST requests](./HttpAzurePOST).
+Illustrates how to connect to [🌶️🌶️🌶️ - Azure and perform POST requests with wifi](./HttpAzurePOST) for Wi-Fi connected targets.
 
 ## Hardware requirements
 
@@ -47,7 +47,7 @@ This sample is coded to use the STM32F769IDiscovery target board, but can be eas
 
 ## Build the sample
 
-1. Start Microsoft Visual Studio 2019 (VS 2017 should be OK too) and select `File > Open > Project/Solution`.
+1. Start Microsoft Visual Studio 2022 or Visual Studio 2019 (Visual Studio 2017 should be OK too) and select `File > Open > Project/Solution`.
 1. Starting in the folder where you unzipped the samples/cloned the repository, go to the subfolder for this specific sample. Double-click the Visual Studio Solution (.sln) file.
 1. Press `Ctrl+Shift+B`, or select `Build > Build Solution`.
 
@@ -63,6 +63,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

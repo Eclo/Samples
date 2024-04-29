@@ -1,6 +1,6 @@
 # 🌶️ - Bluetooth Low energy: adding, replacing services to the main service
 
-This show cases the use of adding extra services to main service or replacing an existing service 
+This show cases the use of adding extra services and replacing an existing service 
 like the default "Device Information Service". 
 
 This sample also includes some standard Bluetooth services as separate classes which may be useful 
@@ -28,3 +28,5 @@ This sample class includes these 4 but other types can easily added to class. Mu
 The sample shows 3 Temperatures (Instantaneous, Maximum, Minimum) added to service and a humidity sensor.
 
 See [main Bluetooth sample's readme](../README.md) for more information.
+
+The sample is [located here](./Program.cs).

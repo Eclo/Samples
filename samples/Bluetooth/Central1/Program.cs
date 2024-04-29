@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Copyright (c) .NET Foundation and Contributors
+// See LICENSE file in the project root for full license information.
+//
+
+using System;
 using System.Diagnostics;
 using System.Threading;
 
@@ -18,6 +22,9 @@ namespace Central1
 
             // Create a BluetoothLEAdvertisementWatcher to look for Bluetooth adverts.
             BluetoothLEAdvertisementWatcher watcher = new();
+
+            // Use active scans to get extra information from devices, scan responses.
+            watcher.ScanningMode = BluetoothLEScanningMode.Active;
 
             // Set up event to monitor received adverts
             watcher.Received += Watcher_Received;
@@ -40,10 +47,27 @@ namespace Central1
             BluetoothLEAdvertisement adv = args.Advertisement;
 
             Console.WriteLine();
-            Console.WriteLine($"=== Advert received ====");
-            Console.WriteLine($"Address:{args.BluetoothAddress:X}");
+            Console.WriteLine($"=== Advert received ==== {DateTime.UtcNow}");
+            Console.WriteLine($"Address:{args.BluetoothAddress:X} RSSI:{args.RawSignalStrengthInDBm}");
             Console.WriteLine($"Local name:{adv.LocalName}");
+
+            // List Manufacturers data
             Console.WriteLine($"Manufacturers Data:{adv.ManufacturerData.Count}");
+            foreach (BluetoothLEManufacturerData md in adv.ManufacturerData)
+            {
+                Console.WriteLine($"-- Company:{md.CompanyId} Length:{md.Data.Length}");
+                DataReader dr = DataReader.FromBuffer(md.Data);
+                byte[] bytes = new byte[md.Data.Length];
+                dr.ReadBytes(bytes);
+
+                foreach (byte b in bytes)
+                {
+                    Console.Write($"{b:X}");
+                }
+                Console.WriteLine();
+            }
+
+            // List Service UUIDS in Advertisement
             Console.WriteLine($"Service UUIDS:{adv.ServiceUuids.Length}");
 
             // There is limited space in adverts you may not get any service UUIDs

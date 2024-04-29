@@ -2,7 +2,9 @@ Document Language: [English](README.md) | [简体中文](README.zh-cn.md)
 
 # 🌶️ - WiFI samples
 
-Shows how to use various APIs related with Wifi. Scan WiFI Networks and connect to a specified network
+Shows how to use various APIs related with Wifi. Scan WiFI Networks and connect to a specified network.
+
+The sample is [located here](./ScanWifi/Program.cs).
 
 ## Hardware requirements
 
@@ -32,6 +34,8 @@ The next steps depend on whether you just want to deploy the sample or you want 
 
 - To debug the sample and then run it, press F5 or select `Debug > Start Debugging`.
 
+> [!NOTE]
+>
 > **Important**: Before deploying or running the sample, please make sure your device is visible in the Device Explorer.
-
+>
 > **Tip**: To display the Device Explorer, go to Visual Studio menus: `View > Other Windows > Device Explorer`.

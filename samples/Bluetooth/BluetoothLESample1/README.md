@@ -1,6 +1,8 @@
 # 🌶️🌶️ - Bluetooth Low energy: read static and dynamic values, notification, read/write value
 
-This shows how to create a custom service which shows the use of:
+This shows how to create a Bluetooth Server with a custom service.
+
+Shows the use of:-
 
 | Custom service | Behavior |
 | --- | --- |
@@ -13,3 +15,5 @@ You will be able to connect to the service and read values or subscribe to be No
 Suitable Phone apps: "LightBlue" or "nRF Connect"
 
 See [main Bluetooth sample's readme](../README.md) for more information.
+
+The sample is [located here](./Program.cs).
